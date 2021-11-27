@@ -1,0 +1,6 @@
+(define (Mac n)
+  (lambda(n)
+    (if ( > n 100)
+        (- n 10)
+        (if ( <= n 100)
+            (Mac(Mac( n + 11)))))))

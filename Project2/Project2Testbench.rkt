@@ -1,0 +1,20 @@
+;; Taylan Unal CMPSC461 Project 2 Testbench
+
+;; 1 (dncall)
+- (dncall 2 (lambda (x) (+ x 1)) 2) [Should return 6]
+;;    If n=2, function is addOne, and x=2. dncall will perform addOne(x) (2*n = 4) times.
+;;    ex. addOne(addOne(addOne(addOne(2)))) => addOne(addOne(addOne(3))) => addOne(addOne(4)) => addOne(5) => 6
+
+- (dncall 3 (lambda (x) (+ x 1)) 2) [Should return 8]
+;;    If n=3, function is addOne, and x=2. dncall will perform addOne(x) (2*n = 6) times.
+;;    ex. addOne(addOne(addOne(addOne(addOne(addOne(2))))) => addOne(addOne(addOne(addOne(addOne(3))))) => addOne(addOne(addOne(addOne(4)))) => addOne(addOne(addOne(5))) => addOne(addOne(6)) => addOne(7) => 8
+
+- (dncall 2 (lambda (x) (* x 2)) 2) [Should return 32]
+;;    If n=2, function is times2, and x=2. dncall will perform (x*2) (2*n = 4) times.
+;;    ex. times2(times2(times2(times2(2)))) => times2(times2(times2(4))) => times2(times2(8)) => times2(16) => 32
+
+;;------------------------------------------------------------------------
+
+;; 2 (keep-if)
+- (keep-if (lambda (x) (> x 3)) '(10 1 7 2)) [should be (10 7)]
+- (keep-if (lambda (x) (< x 4)) '(5 6 7 1 3)) [should be (1 3)]

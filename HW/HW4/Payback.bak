@@ -1,0 +1,8 @@
+;; CMPSC461 HW4 Prob4 Taylan Unal (tuu2)
+;; Payback Function
+
+(define (payback chg pay) ;;function consumes charge amount, calculates pay amount.
+
+
+
+#|
